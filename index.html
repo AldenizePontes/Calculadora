@@ -1,0 +1,48 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=open+sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <title>Calculadora de Anúncio</title>
+  </head>
+  <body>
+    <main id="root">
+
+      <h1>Calculando Anúncios</h1>
+
+      <form class="createView" name="createViewForm">
+        <label class="createView_label">Nome do anúncio<input type="text" class="createView_input" name="NomeAnuncio" data-createView-nome required></label>
+
+        <label class="createView_label">Nome do cliente<input type="text" class="createView_input" name="NomeCliente" data-createView-cliente required></label>
+        <label class="createView_label">Data de início<input type="date" class="createView_data" name="DataInicio" data-createView-dataIn required></label>
+        <label class="createView_label">Data de término<input type="date" class="createView_data" name="DataFinal" data-createView-dataFi required></label>
+        <label class="createView_label">Investimento diário<input type="number" class="createView_input" name="Investimento" data-createView-investimento required></label>
+        <button type="submit" name="btncriar" class="createView__botao" data-createView-botao>Criar Anúncio</button>
+      </form>
+
+      <section class="reportView">
+        <div class="reportView__filtros">
+          <label class="reportView_labelnome">Filtro Nome <input type="text" class="reportViewfiltro_nome" data-reportView-buscaNome></label>
+          <label class="reportView_labeldata">Filtro Data <input type="date" class="reportViewfiltro_data" data-reportView-buscaData></label>
+        </div>
+        <ul class="reportView__card" data-reportView-card></ul>
+      </section>
+      <script src="script.js"></script>
+      <script type="module" src="./Components/controller.js"></script>
+    </main>
+  </body>
+</html>
+
+    
+  
